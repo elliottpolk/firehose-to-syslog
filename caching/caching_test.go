@@ -8,8 +8,8 @@ import (
 	"io/ioutil"
 	"time"
 
-	. "github.com/cloudfoundry-community/firehose-to-syslog/caching"
-	. "github.com/cloudfoundry-community/firehose-to-syslog/caching/cachingfakes"
+	. "github.com/elliottpolk/firehose-to-syslog/caching"
+	. "github.com/elliottpolk/firehose-to-syslog/caching/cachingfakes"
 	cfclient "github.com/cloudfoundry-community/go-cfclient"
 
 	. "github.com/onsi/ginkgo"

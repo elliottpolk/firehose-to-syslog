@@ -4,7 +4,7 @@ package loggingfakes
 import (
 	"sync"
 
-	"github.com/cloudfoundry-community/firehose-to-syslog/logging"
+	"github.com/elliottpolk/firehose-to-syslog/logging"
 )
 
 type FakeLogging struct {

@@ -9,12 +9,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cloudfoundry-community/firehose-to-syslog/caching"
-	"github.com/cloudfoundry-community/firehose-to-syslog/eventRouting"
-	"github.com/cloudfoundry-community/firehose-to-syslog/firehoseclient"
-	"github.com/cloudfoundry-community/firehose-to-syslog/logging"
-	"github.com/cloudfoundry-community/firehose-to-syslog/stats"
-	"github.com/cloudfoundry-community/firehose-to-syslog/uaatokenrefresher"
+	"github.com/elliottpolk/firehose-to-syslog/caching"
+	"github.com/elliottpolk/firehose-to-syslog/eventRouting"
+	"github.com/elliottpolk/firehose-to-syslog/firehoseclient"
+	"github.com/elliottpolk/firehose-to-syslog/logging"
+	"github.com/elliottpolk/firehose-to-syslog/stats"
+	"github.com/elliottpolk/firehose-to-syslog/uaatokenrefresher"
 	"github.com/cloudfoundry-community/go-cfclient"
 	"gopkg.in/alecthomas/kingpin.v2"
 )

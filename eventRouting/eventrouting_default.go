@@ -5,11 +5,11 @@ import (
 	"os"
 	"strings"
 
-	"github.com/cloudfoundry-community/firehose-to-syslog/caching"
-	fevents "github.com/cloudfoundry-community/firehose-to-syslog/events"
-	"github.com/cloudfoundry-community/firehose-to-syslog/extrafields"
-	"github.com/cloudfoundry-community/firehose-to-syslog/logging"
-	"github.com/cloudfoundry-community/firehose-to-syslog/stats"
+	"github.com/elliottpolk/firehose-to-syslog/caching"
+	fevents "github.com/elliottpolk/firehose-to-syslog/events"
+	"github.com/elliottpolk/firehose-to-syslog/extrafields"
+	"github.com/elliottpolk/firehose-to-syslog/logging"
+	"github.com/elliottpolk/firehose-to-syslog/stats"
 	"github.com/cloudfoundry/sonde-go/events"
 )
 

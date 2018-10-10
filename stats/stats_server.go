@@ -51,7 +51,7 @@ func (s *Server) Start() {
 
 func index(w http.ResponseWriter, _ *http.Request) {
 	body := `
-<a href="https://github.com/cloudfoundry-community/firehose-to-syslog">firehose-to-syslog</a>
+<a href="https://github.com/elliottpolk/firehose-to-syslog">firehose-to-syslog</a>
 <ul>
   <li><a href="/stats/runtime">stats/runtime</a></li>
   <li><a href="/stats/app">stats/app</a></li>

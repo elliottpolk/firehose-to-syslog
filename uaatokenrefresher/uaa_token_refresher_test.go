@@ -1,8 +1,8 @@
 package uaatokenrefresher_test
 
 import (
-	. "github.com/cloudfoundry-community/firehose-to-syslog/uaatokenrefresher"
-	"github.com/cloudfoundry-community/firehose-to-syslog/uaatokenrefresher/fakes"
+	. "github.com/elliottpolk/firehose-to-syslog/uaatokenrefresher"
+	"github.com/elliottpolk/firehose-to-syslog/uaatokenrefresher/fakes"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )

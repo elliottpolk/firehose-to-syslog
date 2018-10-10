@@ -4,7 +4,7 @@ package cachingfakes
 import (
 	"sync"
 
-	"github.com/cloudfoundry-community/firehose-to-syslog/caching"
+	"github.com/elliottpolk/firehose-to-syslog/caching"
 )
 
 type FakeCaching struct {

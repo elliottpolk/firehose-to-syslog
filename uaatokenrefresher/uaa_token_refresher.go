@@ -3,7 +3,7 @@ package uaatokenrefresher
 import (
 	"fmt"
 
-	"github.com/cloudfoundry-community/firehose-to-syslog/logging"
+	"github.com/elliottpolk/firehose-to-syslog/logging"
 	"github.com/cloudfoundry-incubator/uaago"
 )
 

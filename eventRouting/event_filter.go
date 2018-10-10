@@ -3,7 +3,7 @@ package eventRouting
 import (
 	"strings"
 
-	fevents "github.com/cloudfoundry-community/firehose-to-syslog/events"
+	fevents "github.com/elliottpolk/firehose-to-syslog/events"
 )
 
 //EventFilter Given an Event Filter out unwanted event

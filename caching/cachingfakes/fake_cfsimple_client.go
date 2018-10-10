@@ -5,7 +5,7 @@ import (
 	"io"
 	"sync"
 
-	"github.com/cloudfoundry-community/firehose-to-syslog/caching"
+	"github.com/elliottpolk/firehose-to-syslog/caching"
 )
 
 type FakeCFSimpleClient struct {

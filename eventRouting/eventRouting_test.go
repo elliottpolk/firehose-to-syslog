@@ -1,12 +1,12 @@
 package eventRouting_test
 
 import (
-	. "github.com/cloudfoundry-community/firehose-to-syslog/caching"
-	. "github.com/cloudfoundry-community/firehose-to-syslog/caching/cachingfakes"
-	. "github.com/cloudfoundry-community/firehose-to-syslog/eventRouting"
-	"github.com/cloudfoundry-community/firehose-to-syslog/logging"
-	. "github.com/cloudfoundry-community/firehose-to-syslog/logging/loggingfakes"
-	. "github.com/cloudfoundry-community/firehose-to-syslog/stats"
+	. "github.com/elliottpolk/firehose-to-syslog/caching"
+	. "github.com/elliottpolk/firehose-to-syslog/caching/cachingfakes"
+	. "github.com/elliottpolk/firehose-to-syslog/eventRouting"
+	"github.com/elliottpolk/firehose-to-syslog/logging"
+	. "github.com/elliottpolk/firehose-to-syslog/logging/loggingfakes"
+	. "github.com/elliottpolk/firehose-to-syslog/stats"
 	"github.com/cloudfoundry/sonde-go/events"
 
 	. "github.com/onsi/ginkgo"

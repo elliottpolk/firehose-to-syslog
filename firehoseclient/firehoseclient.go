@@ -6,13 +6,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cloudfoundry-community/firehose-to-syslog/stats"
+	"github.com/elliottpolk/firehose-to-syslog/stats"
 
 	gendiodes "code.cloudfoundry.org/go-diodes"
-	"github.com/cloudfoundry-community/firehose-to-syslog/diodes"
-	"github.com/cloudfoundry-community/firehose-to-syslog/eventRouting"
-	"github.com/cloudfoundry-community/firehose-to-syslog/logging"
-	"github.com/cloudfoundry-community/firehose-to-syslog/uaatokenrefresher"
+	"github.com/elliottpolk/firehose-to-syslog/diodes"
+	"github.com/elliottpolk/firehose-to-syslog/eventRouting"
+	"github.com/elliottpolk/firehose-to-syslog/logging"
+	"github.com/elliottpolk/firehose-to-syslog/uaatokenrefresher"
 	"github.com/cloudfoundry/noaa/consumer"
 	noaerrors "github.com/cloudfoundry/noaa/errors"
 	"github.com/cloudfoundry/sonde-go/events"
