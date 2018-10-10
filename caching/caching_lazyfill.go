@@ -7,8 +7,13 @@ import (
 	"strings"
 	"time"
 
+	"github.com/elliottpolk/firehose-to-syslog/logging"
+
 	uuid "github.com/satori/go.uuid"
+	"github.com/pkg/errors"
 )
+
+var InvalidEntityErr error = errors.New("invalid entity provided")
 
 type entity struct {
 	Name             string                 `json:"name"`
@@ -63,10 +68,22 @@ func (c *CacheLazyFill) FillCache() error {
 		}
 		uuid := u.String()
 
+		// TODO currently being used for debugging of nil app / entity elements
+		logging.LogStd(fmt.Sprintf("attempting to load app with uuid %s", uuid), true)
+		if app == nil {
+			logging.LogStd(fmt.Sprintf("[WARN] %s is associated to a nil app entity... skipping", uuid), true)
+			continue
+		}
+
 		// Save our app out
 		err = c.normaliseAndSaveEntityToDatabase("apps", uuid, app)
 		if err != nil {
-			return err
+			if err != InvalidEntityErr {
+				return err
+			}
+
+			logging.LogError(fmt.Sprintf("invalid or nil app specified for uuid %s", uuid), err)
+			continue
 		}
 
 		// Fetch and poulate space and org
@@ -138,6 +155,10 @@ func makeCacheStorageKey(entityType, uuid string) string {
 // uuid  must be validated by caller
 // nv may be modified by this function
 func (c *CacheLazyFill) normaliseAndSaveEntityToDatabase(entityType, uuid string, nv *entity) error {
+	if nv == nil {
+		return InvalidEntityErr
+	}
+
 	// Strip name suffixes if applicable. This is intended for blue green deployments,
 	// so that things like -venerable can be stripped from renamed apps
 	if entityType == "apps" {
